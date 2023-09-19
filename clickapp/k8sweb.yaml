@@ -18,8 +18,6 @@ spec:
       - name: k8s-counter
         image: wallnerryan/moby-counter:v1.15
         imagePullPolicy: Always
-        ports:
-        - containerPort: 80
         env:
         - name: USE_POSTGRES_HOST
           value: "pg-service.demo.svc.cluster.local"
