@@ -19,7 +19,7 @@ spec:
         image: wallnerryan/moby-counter:v1.15
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         env:
         - name: USE_POSTGRES_HOST
           value: "pg-service.demo.svc.cluster.local"
@@ -41,6 +41,6 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 80
+    targetPort: 8080
     nodePort: 30124
     name: k8s-counter-web
