@@ -23,6 +23,8 @@ metadata:
     app.kubernetes.io/component: backend
   namespace: pxbbq
 spec:
+  securityContext:
+    runAsUser: 1000
   selector:
     matchLabels:
       app.kubernetes.io/name: mongo
