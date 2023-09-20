@@ -23,8 +23,6 @@ metadata:
     app.kubernetes.io/component: backend
   namespace: pxbbq
 spec:
-  securityContext:
-    runAsUser: 1000
   selector:
     matchLabels:
       app.kubernetes.io/name: mongo
@@ -36,6 +34,8 @@ spec:
         app.kubernetes.io/name: mongo
         app.kubernetes.io/component: backend
     spec:
+      securityContext:
+    	runAsUser: 1000
       containers:
       - name: mongo
         image: mongo
