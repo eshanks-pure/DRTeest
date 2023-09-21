@@ -1,0 +1,7 @@
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+metadata:
+  name: custom-scc
+allowPrivilegedContainer: true
+# Add other desired settings for your ServiceAccount
+

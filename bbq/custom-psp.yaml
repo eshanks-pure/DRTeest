@@ -1,8 +1,0 @@
-apiVersion: policy/v1beta1
-kind: PodSecurityPolicy
-metadata:
-  name: custom-psp
-spec:
-  privileged: true
-  allowPrivilegeEscalation: true
-  # Add other desired settings for your MongoDB container
