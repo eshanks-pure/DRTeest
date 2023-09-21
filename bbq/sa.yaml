@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: mongo-sa
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: mongo-sa-binding
+subjects:
+- kind: ServiceAccount
+  name: mongo-sa
+  namespace: pxbbq
+roleRef:
+  kind: PodSecurityPolicy
+  name: custom-psp
+  apiGroup: policy
