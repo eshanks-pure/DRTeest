@@ -37,6 +37,9 @@ spec:
       containers:
       - name: mongo
         image: mongo
+        securityContext:
+          privileged: true
+          runAsUser: 0
         env:
           - name: MONGO_INITDB_ROOT_USERNAME
             value: porxie
