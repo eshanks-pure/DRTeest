@@ -6,5 +6,7 @@ allowHostDirVolumePlugin: true
 allowPrivilegedContainer: true
 runAsUser:
   type: MustRunAs
+  uidRangeMin: 1000810000
+  uidRangeMax: 1000810000
 seLinuxContext:
   type: MustRunAs
