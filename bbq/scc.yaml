@@ -1,10 +1,10 @@
-metadata:
-  name: custom-scc
 apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
+metadata:
+  name: custom-scc-for-mongodb
 allowHostDirVolumePlugin: true
 allowPrivilegedContainer: true
 runAsUser:
-  type: RunAsAny
+  type: MustRunAs
 seLinuxContext:
   type: MustRunAs

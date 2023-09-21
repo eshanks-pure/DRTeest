@@ -1,0 +1,11 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: mongodb-clusterrolebinding
+subjects:
+- kind: ServiceAccount
+  name: mongodb-serviceaccount
+roleRef:
+  kind: ClusterRole
+  name: mongodb-clusterrole
+  apiGroup: rbac.authorization.k8s.io
