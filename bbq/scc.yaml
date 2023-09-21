@@ -1,11 +1,26 @@
 apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:
-  name: custom-scc-for-mongodb
-allowHostDirVolumePlugin: true
+  name: allow-all-deployments
+allowHostIPC: true
+allowHostNetwork: true
+allowHostPID: true
+allowHostPorts: true
+allowPrivilegeEscalation: true
 allowPrivilegedContainer: true
+fsGroup:
+  type: RunAsAny
+groups:
+- "*"
+priority: null
+readOnlyRootFilesystem: false
 runAsUser:
-  type: MustRunAs
-  uid: 1000810000
+  type: RunAsAny
 seLinuxContext:
-  type: MustRunAs
+  type: RunAsAny
+supplementalGroups:
+  type: RunAsAny
+users:
+- "*"
+volumes:
+- "*"

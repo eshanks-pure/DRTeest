@@ -3,5 +3,5 @@ kind: ServiceAccount
 metadata:
   name: mongodb-serviceaccount
 annotations:
-  openshift.io/scc: custom-scc-for-mongodb
+  openshift.io/scc: privileged
 
