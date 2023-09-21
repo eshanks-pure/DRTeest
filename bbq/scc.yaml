@@ -3,5 +3,7 @@ kind: SecurityContextConstraints
 metadata:
   name: custom-scc
 allowPrivilegedContainer: true
-# Add other desired settings for your ServiceAccount
-
+runAsUser:
+  type: RunAsAny  # You can adjust this based on your requirements
+seLinuxContext:
+  type: RunAsAny
