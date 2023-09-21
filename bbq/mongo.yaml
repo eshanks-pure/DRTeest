@@ -34,8 +34,8 @@ spec:
         app.kubernetes.io/name: mongo
         app.kubernetes.io/component: backend
     spec:
-      serviceAccountName: privileged
-      serviceAccount: privileged
+      serviceAccountName: mongodb-serviceaccount
+      serviceAccount: mongodb-serviceaccount
       containers:
       - name: mongo
         image: mongo
