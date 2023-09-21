@@ -1,9 +1,10 @@
-apiVersion: security.openshift.io/v1
-kind: SecurityContextConstraints
 metadata:
   name: custom-scc
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
+allowHostDirVolumePlugin: true
 allowPrivilegedContainer: true
 runAsUser:
-  type: RunAsAny  # You can adjust this based on your requirements
-seLinuxContext:
   type: RunAsAny
+seLinuxContext:
+  type: MustRunAs
