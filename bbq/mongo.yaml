@@ -40,7 +40,7 @@ spec:
         image: mongo
         securityContext:
           privileged: true
-          runAsUser: 0
+          runAsUser: 1000750000
         env:
           - name: MONGO_INITDB_ROOT_USERNAME
             value: porxie
