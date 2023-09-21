@@ -5,6 +5,6 @@ metadata:
 allowHostDirVolumePlugin: true
 allowPrivilegedContainer: true
 runAsUser:
-  type: RunAsAny
+  type: MustRunAs
 seLinuxContext:
   type: MustRunAs

@@ -1,0 +1,30 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: mongodb-clusterrole
+rules:
+- apiGroups: [""]
+  # Use "" for the core API group
+  resources: ["*"]
+  verbs: ["*"]
+- apiGroups: ["apps"]
+  # Use "apps" for the apps API group if you're deploying MongoDB using Deployments or StatefulSets
+  resources: ["*"]
+  verbs: ["*"]
+- apiGroups: ["batch"]
+  # If you need cron jobs or other batch jobs
+  resources: ["*"]
+  verbs: ["*"]
+- apiGroups: ["extensions"]
+  # For deprecated extensions API group
+  resources: ["*"]
+  verbs: ["*"]
+- apiGroups: ["networking.k8s.io"]
+  # For network policies, if needed
+  resources: ["*"]
+  verbs: ["*"]
+- apiGroups: ["storage.k8s.io"]
+  resources: ["*"]
+  verbs: ["*"]
+# Add more rules as needed for other resources and actions
+
