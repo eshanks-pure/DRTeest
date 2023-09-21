@@ -5,6 +5,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: mongodb-serviceaccount
+  namespace: pxbbq
 roleRef:
   kind: ClusterRole
   name: mongodb-clusterrole
